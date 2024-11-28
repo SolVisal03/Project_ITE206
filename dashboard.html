@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Event Management Dashboard</title>
+    <link rel="stylesheet" href="content/sidebar.css" />
+    <link rel="stylesheet" href="content/maincontent.css" />
+</head>
+<body>
+
+    <!-- Left side bar START -->
+    <div class="sidebar">
+
+        <!-- Profile START -->
+        <div class="profile">
+            <img id="profilePic" src="content/picture/logo.png" alt="Profile Picture">
+            <p style="color: rgb(0, 8, 122);" >Events Management</p>
+            <p style="color: rgb(0, 8, 122);;">_________________</p>
+        </div>
+        <!-- Profile END -->
+
+    <h2 style="color: black;">Admin Panel</h2>
+
+    <!-- Link to pages START -->
+    <ul>
+        <li><a href="dashboard.html" style="color: rgb(0, 0, 0);">Dashboard</a></li>
+        <li><a href="index.html" style="color: black;">Log out</a></li>
+    </ul>
+    <!-- Link to pages END -->
+    </div>
+        <!-- Left side bar END -->
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Event Management Dashboard</h1>
+            <input type="text" id="search" placeholder="Search events..." onkeyup="searchEvents()"> <!-- Search Events Bar -->
+        </div>
+
+        <!-- Add event & id for search bar START -->    
+        <div class="form-container" id="addEvent">
+            <h3>Add New Event</h3>
+            <label for="newName" >Name:</label>
+            <input type="text" id="newName">
+            <label for="newStartDate">Start Date:</label>
+            <input type="date" id="newStartDate">
+            <label for="newEndDate">End Date:</label>
+            <input type="date" id="newEndDate">
+            <label for="newLocation">Location:</label>
+            <input type="text" id="newLocation">
+            <label for="newStatus">Status:</label>
+            <select id="newStatus">
+                <option value="active">Active</option>
+                <option value="ended">Ended</option>
+                <option value="pending">Pending</option>
+            </select>
+            <button onclick="addEvent()">Add Event</button>
+        </div>
+        <!-- Add event & id for search bar END -->
+
+        <div class="table-container"> <!-- Table for event -->
+            <table>
+                <thead> <!-- Show table head in table-container -->
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="eventTable"> <!-- Show table body in table-container -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Event edit edit START -->   
+        <div class="form-container" id="editForm" style="display: none;">
+            <h3>Edit Event</h3>
+            <input type="hidden" id="editId">
+            <label for="editName">Name:</label>
+            <input type="text" id="editName">
+            <label for="editStartDate">Start Date:</label>
+            <input type="date" id="editStartDate">
+            <label for="editEndDate">End Date:</label>
+            <input type="date" id="editEndDate">
+            <label for="editLocation">Location:</label>
+            <input type="text" id="editLocation">
+            <label for="editStatus">Status:</label>
+        <!-- Event edit END -->
+
+            <select id="editStatus"> <!-- Choose status -->
+                <option value="active">Active</option>
+                <option value="ended">Ended</option>
+                <option value="pending">Pending</option>
+            </select>
+            <button onclick="saveEdit()">Save</button> <!-- After edit -->
+        </div>
+    </div>
+    <script src="content/script.js">
+    </script>
+</body>
+</html>

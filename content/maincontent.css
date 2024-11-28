@@ -1,0 +1,109 @@
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Table for event START */
+.table-container {
+    margin-top: 20px;
+    border-color: black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 2px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    border-color: black;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.status.active {
+    background-color: green;
+}
+
+.status.ended {
+    background-color: red;
+}
+
+.status.pending {
+    background-color: yellow;
+    color: black;
+}
+
+.actions button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.actions .edit-btn {
+    background-color: #ffc107;
+}
+
+.actions .delete-btn {
+    background-color: #dc3545;
+}
+
+.actions .view-btn {
+    background-color: #007bff;
+}
+/* Table for event END */
+
+/* Container for add event & edit event (style) */
+.form-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Container for add event & edit event */
+.form-container input, .form-container select, .form-container button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.form-container button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,119 @@
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, rgb(74, 116, 255), rgb(212, 118, 255) );
+}
+
+/* Box style in body */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    display: flex;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+/* -------------------------- */
+
+/* Add image in the container */
+.left-section {
+    flex: 1;
+    background-image: url('../styles/picture/bg-logo.jpg');
+    position: relative;
+}
+
+.left-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 89, 231, 0.425);
+}
+/* ------------------------ */
+
+/* Login in form START */
+.right-section {
+    flex: 1;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input username & password */
+form {
+    width: 100%;
+    max-width: 350px;
+}
+
+* { /* algin placeholder equal to box size */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-group .icon { /* Small icon show in username & password placeholder */
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #666;
+}
+/* ------------------- */
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #5776ff;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a48c8;
+}
+/* ------------------- */
+/* Login in form END */
